@@ -1,0 +1,19 @@
+local Crucifix = game:GetObjects(76998344598630)
+local Player = game.Players.LocalPlayer
+
+Crucifix.Parent = Player.Backpack
+
+Crucifix.Activated:Connect(function()
+    local Mouse = Player:GetMouse()
+    
+    local function CrucifyTarget()
+        if Mouse.Target:IsA("BasePart") then
+            local Explosion = Instance.new("Explosion")
+            
+            Explosion.Parent = Mouse.Target
+        else
+            print("g")
+        end
+    end
+    CrucifyTarget()
+end)

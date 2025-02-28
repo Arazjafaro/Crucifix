@@ -1,0 +1,2 @@
+local item = game:GetObjects("rbxassetid://76998344598630")[1]
+                item.Parent = game.Players.LocalPlayer.Backpack
